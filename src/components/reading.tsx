@@ -1,6 +1,7 @@
 import { Flex, Button } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 import Article from "./article";
+  import InfiniteScroll from 'react-infinite-scroll-component';
 
 export default function Reading() {
     const [data, setData] = useState<any>([]);
@@ -24,7 +25,7 @@ export default function Reading() {
 
     return (
     <>
-      <Flex height="100%" width="70vw" flexDirection="column" align="center" border="0px solid blue">
+      <Flex height="90%" width="70vw" flexDirection="column" align="center" border="0px solid blue"  overflowY="auto">
         {hasData ? data.map((item:any) => (<Article key={item.id} data={item} />)) : <p>aguardando...</p>}
      </Flex>
    </>

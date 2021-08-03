@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
       <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-      <Flex align="center" justify="center" direction="column" width="100vw" height="100vh" paddingTop="40px">
+      <Flex align="center" justify="center" direction="column" width="100vw" height="100vh" paddingTop="40px"  overflowY="hidden">
         <Header />
         <Component {...pageProps} />
       </Flex>
